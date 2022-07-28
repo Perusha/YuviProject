@@ -9,28 +9,51 @@ import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 import Lottie from 'react-lottie';
 import animationData from '../../assets/Lotties/city.json';
+import animationData2 from '../../assets/Lotties/data2.json';
+import animationData3 from '../../assets/Lotties/bim1.json';
 import Grid from '@material-ui/core/Grid';
+import Carousel from 'react-material-ui-carousel';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   container: {
     textAlign: 'center',
   },
   title: {
-      fontSize: '2.5rem',
-      color: '#002060'
+    fontSize: '2.5rem',
+    color: '#002060'
   },
   colorText: {
-      textAlign: 'center',
-      color: '#4472c4',
-    },
+    textAlign: 'center',
+    color: '#4472c4',
+  },
   minititle: {
-      fontSize: '1.5rem',
-      color: '#002060',
-      fontFamily: 'Nunito',
-    },
+    fontSize: '1.5rem',
+    color: '#002060',
+    fontFamily: 'Nunito',
+  },
 }));
 
 export default function Header() {
+
+  return (
+    <>
+      <Wrapper id="home">
+        <br />
+        <br />
+
+        <Carousel interval={8000} indicators={true} >
+          <HeaderStage1 />
+          <HeaderStage2 />
+          <HeaderStage3 />
+        </Carousel>
+      </Wrapper>
+
+
+    </>
+  );
+}
+
+export function HeaderStage1() {
   const classes = useStyles();
 
   const defaultOptions = {
@@ -43,48 +66,133 @@ export default function Header() {
   };
 
   return (
-    <>
-      <Wrapper id="home">
-
-        <br />
-        <br />
-        <Grid container justify='center' >
-          <Grid item md={6}>
-            <Lottie
-              options={defaultOptions}
-              height='auto'
-              width='auto'
-            />
-          </Grid>
+    <div>
+      <Grid container justify='center' >
+        <Grid item md={6}>
+          <Lottie
+            options={defaultOptions}
+            height='auto'
+            width='auto'
+          />
         </Grid>
-        <br />
-        <Grid container justify='center' >
-          <Grid item className={classes.container}>
-            <h1 className={classes.title}>
-              Welcome to
-              <span className={classes.colorText}> BIM INTELIGENCE INC.</span>
-            </h1>
+      </Grid>
+      <br />
+      <Grid container justify='center' >
+        <Grid item className={classes.container}>
+          <h1 className={classes.title}>
+            Welcome to
+            <span className={classes.colorText}> BIM INTELIGENCE INC.</span>
+          </h1>
 
-          </Grid>
         </Grid>
+      </Grid>
 
-        <Grid container justify='center' >
-          <Grid item >
-            <p className={classes.minititle}>
-              beyond information modeling..
-            </p>
-          </Grid>
+      <Grid container justify='center' >
+        <Grid item >
+          <p className={classes.minititle}>
+            beyond information modeling..
+          </p>
         </Grid>
-
-
-      </Wrapper>
-
-
-    </>
+      </Grid>
+    </div>
   );
 }
 
 
+
+export function HeaderStage2() {
+  const classes = useStyles();
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData2,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
+  return (
+    <div>
+      <Grid container justify='center' >
+        <Grid item md={6}>
+          <Lottie
+            options={defaultOptions}
+            height='350px'
+            width='500px'
+          />
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container justify='center' >
+        <Grid item className={classes.container}>
+          <h1 className={classes.title}>
+            CAD
+            <span className={classes.colorText}> Services</span>
+          </h1>
+
+
+        </Grid>
+      </Grid>
+
+      <Grid container justify='center' >
+        <Grid item >
+          <p className={classes.minititle}>
+            beyond information modeling..
+          </p>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
+
+
+
+export function HeaderStage3() {
+  const classes = useStyles();
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData3,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
+  return (
+    <div>
+      <Grid container justify='center' >
+        <Grid item md={6}>
+          <Lottie
+            options={defaultOptions}
+            height='350px'
+            width='500px'
+          />
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container justify='center' >
+        <Grid item className={classes.container}>
+          <h1 className={classes.title}>
+            BIM
+            <span className={classes.colorText}> Services</span>
+          </h1>
+
+
+        </Grid>
+      </Grid>
+
+      <Grid container justify='center' >
+        <Grid item >
+          <p className={classes.minititle}>
+            beyond information modeling..
+          </p>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
 const Wrapper = styled.section`
   padding-top: 80px;
   width: 100%;
