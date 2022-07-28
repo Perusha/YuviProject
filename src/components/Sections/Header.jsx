@@ -31,13 +31,16 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     color: '#002060',
     fontFamily: 'Nunito',
   },
+  root: {
+    backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/whitebg4.png'})`,
+  }
 }));
 
 export default function Header() {
-
+  const classes = useStyles();
   return (
-    <>
-      <Wrapper id="home">
+    <div className={classes.root}>
+      <Wrapper id="home" >
         <br />
         <br />
 
@@ -49,7 +52,7 @@ export default function Header() {
       </Wrapper>
 
 
-    </>
+    </div>
   );
 }
 
