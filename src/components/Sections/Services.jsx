@@ -149,7 +149,7 @@ export default function Services() {
               </AddLeft>
               <AddRight>
                 <AddRightInner>
-                  <div className="flexNullCenter">
+                  {/* <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
                       <img src={AddImage1} alt="office" />
                     </AddImgWrapp1>
@@ -164,7 +164,7 @@ export default function Services() {
                     <AddImgWrapp4>
                       <img src={AddImage4} alt="office" />
                     </AddImgWrapp4>
-                  </div>
+                  </div> */}
                 </AddRightInner>
               </AddRight>
             </Advertising>
