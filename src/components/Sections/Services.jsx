@@ -1,6 +1,9 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import styled from "styled-components";
+import Lottie from 'react-lottie';
+import aboutus from '../../assets/Lotties/aboutus.json';
+import Grid from '@material-ui/core/Grid';
 // Components
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
@@ -55,6 +58,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Services() {
   const classes = useStyles();
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: aboutus,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
   return (
     <Wrapper id="services">
       {/* <div className="lightBg" style={{ padding: "50px 0" }}>
@@ -120,23 +133,23 @@ export default function Services() {
                 <p className={classes.minititle} >
                   <br />The following services are available from us:</p>
                 <ul className={classes.listtitle}>
-                  <li>Provide 2D design and construction drawings in AutoCAD and PDF</li>
-                  <li> Model the architectural drawings in Autodesk Revit</li>
-                  <li> Model the structural drawings in Autodesk Revit</li>
-                  <li>Model the MEP drawings in Autodesk Revit </li>
-                  <li>Perform clash detection in Navisworks </li>
-                  <li>Create 4D models in Navisworks</li>
-                  <li>Creating As Built Revit Models of existing buildings using LIDAR Technology</li>
-                  <li>Lighting calculation and simulation based on Dialux platform </li>
-                  <li>Energy optimization of Buildings </li>
-                  <li>Computational Fluid Dynamics (CFD) Simulations of Spaces, Ducts and Pipes </li>
-                  <li>Detailed Bill of material of MEP systems </li>
-                  <li>Site visits on case-by-case basis</li>
-                  <li>Large Scale BIM MEP Trainings for Companies</li>
-                  <li>DYNAMO Based Automations for Repetitive tasks and for Extracting Project Data from Revit</li>
-                  <li>Navisworks Based 3D Model Reviews</li>
-                  <li>High-Definition Walkthrough Videos for Presentation and Viewing Purposes</li>
-                  <li>Revit and AutoCAD Automations and Add-ins to Suit Customers’ special Requirements”</li>
+                  <li>• Provide 2D design and construction drawings in AutoCAD and PDF</li>
+                  <li>• Model the architectural drawings in Autodesk Revit</li>
+                  <li>• Model the structural drawings in Autodesk Revit</li>
+                  <li>• Model the MEP drawings in Autodesk Revit </li>
+                  <li>• Perform clash detection in Navisworks </li>
+                  <li>• Create 4D models in Navisworks</li>
+                  <li>• Creating As Built Revit Models of existing buildings using LIDAR Technology</li>
+                  <li>• Lighting calculation and simulation based on Dialux platform </li>
+                  <li>• Energy optimization of Buildings </li>
+                  <li>• Computational Fluid Dynamics (CFD) Simulations of Spaces, Ducts and Pipes </li>
+                  <li>• Detailed Bill of material of MEP systems </li>
+                  <li>• Site visits on case-by-case basis</li>
+                  <li>• Large Scale BIM MEP Trainings for Companies</li>
+                  <li>• DYNAMO Based Automations for Repetitive tasks and for Extracting Project Data from Revit</li>
+                  <li>• Navisworks Based 3D Model Reviews</li>
+                  <li>• High-Definition Walkthrough Videos for Presentation and Viewing Purposes</li>
+                  <li>• Revit and AutoCAD Automations and Add-ins to Suit Customers’ special Requirements”</li>
                 </ul>
                 {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>
@@ -149,7 +162,12 @@ export default function Services() {
               </AddLeft>
               <AddRight>
                 <AddRightInner>
-                  <div className="flexNullCenter">
+          <Lottie
+            options={defaultOptions}
+            height='auto'
+            width='auto'
+          />
+                  {/* <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
                       <img src={AddImage1} alt="office" />
                     </AddImgWrapp1>
@@ -164,7 +182,7 @@ export default function Services() {
                     <AddImgWrapp4>
                       <img src={AddImage4} alt="office" />
                     </AddImgWrapp4>
-                  </div>
+                  </div> */}
                 </AddRightInner>
               </AddRight>
             </Advertising>
@@ -237,7 +255,7 @@ const AddLeft = styled.div`
 const AddRight = styled.div`
   width: 50%;
   position: absolute;
-  top: -70px;
+  top:300px;
   right: 0;
   @media (max-width: 860px) {
     width: 80%;

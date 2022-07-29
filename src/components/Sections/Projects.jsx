@@ -12,6 +12,8 @@ import ProjectImg4 from "../../assets/img/projects/4.png";
 import ProjectImg5 from "../../assets/img/projects/5.png";
 import ProjectImg6 from "../../assets/img/projects/6.png";
 import AddImage2 from "../../assets/img/add/add2.png";
+import img1 from '../../assets/img/images/bg1.jpg';
+import img2 from '../../assets/img/images/bg2.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Projects() {
   const classes = useStyles();
   return (
+    <>
     <Wrapper id="projects">
       <div className="whiteBg">
         <div className="container">
@@ -74,55 +77,55 @@ export default function Projects() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg1}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={img1}
+                title="Mechanical"
+                text="Be a Legend!"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg2}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={img2}
+                title="Electrical"
+                text="Time to choose side!"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg3}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={img1}
+                title="Plumbing"
+                text="What are you waiting?"
                 action={() => alert("clicked")}
               />
             </div>
           </div>
-          {/* <div className="row textCenter">
+          <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg4}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={img1}
+                title="Common"
+                text="What are you waiting?"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg5}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={img1}
+                title="Special"
+                text="What are you waiting?"
                 action={() => alert("clicked")}
               />
             </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            {/* <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg6}
                 title="Awesome Project"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 action={() => alert("clicked")}
               />
-            </div>
-          </div> */}
+            </div> */}
+          </div>
           {/* <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
               <FullButton title="Load More" action={() => alert("clicked")} />
@@ -130,14 +133,40 @@ export default function Projects() {
           </div> */}
         </div>
       </div>
-      <div className="lightBg">
+      
+    </Wrapper>
+    <Wrapper id="blog">
+    <div className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
             <AddLeft>
               <AddLeftInner>
-                <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
-                </ImgWrapper>
+              <div className="row textCenter">
+            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <ProjectBox
+                img={img1}
+                title="Design Drawing"
+                text="Design Drawing"
+                action={() => alert("clicked")}
+              />
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <ProjectBox
+                img={img2}
+                title="Shop Drawing"
+                text="Shop Drawing"
+                action={() => alert("clicked")}
+              />
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <ProjectBox
+                img={img1}
+                title="Others"
+                text="Others"
+                action={() => alert("clicked")}
+              />
+            </div>
+          </div>
               </AddLeftInner>
             </AddLeft>
             <AddRight>
@@ -161,6 +190,8 @@ export default function Projects() {
         </div>
       </div>
     </Wrapper>
+    </>
+    
   );
 }
 
@@ -219,8 +250,8 @@ const AddRight = styled.div`
 const AddLeftInner = styled.div`
   width: 100%;
   position: absolute;
-  top: -300px;
-  left: 0;
+  top: -160px;
+  left: -40px;
   @media (max-width: 1190px) {
     top: -250px;
   }
