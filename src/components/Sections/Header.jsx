@@ -20,6 +20,8 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   },
   title: {
     fontSize: '2.5rem',
+    //fontWeight: 8000,
+    //fontFamily: 'Nunito',
     color: '#002060'
   },
   colorText: {
@@ -82,7 +84,7 @@ export function HeaderStage1() {
       <br />
       <Grid container justify='center' >
         <Grid item className={classes.container}>
-          <h1 className={classes.title}>
+          <h1 style={{fontWeight: 'bold'}} className={classes.title}>
             Welcome to
             <span className={classes.colorText}> BIM INTELIGENCE INC.</span>
           </h1>

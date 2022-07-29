@@ -104,9 +104,11 @@ export default function Services() {
             <Advertising className="flexSpaceCenter">
               <AddLeft>
                 <h4 className="font15 semiBold">A few words about company</h4>
+                <TitleMain>
                 <h1 className={classes.title}>
                   About <span className={classes.colorText}> US</span>
                 </h1>
+                </TitleMain>
                 <p className={classes.minititle}>
                   BIM Intelligence INC is a group of BIM and CAD experts based in Canada.
                   We streamline the building design and construction processes to decrease project time and expense while improving project quality.
@@ -272,6 +274,12 @@ const AddImgWrapp2 = styled.div`
     -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   }
+`;
+const TitleMain = styled.div`
+  font-size: 3rem;
+  font-weight: 1800;
+  color: #002060;
+  font-family: 'Nunito';
 `;
 const AddImgWrapp3 = styled.div`
   width: 20%;
