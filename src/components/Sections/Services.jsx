@@ -1,4 +1,5 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
 import styled from "styled-components";
 // Components
 import ClientSlider from "../Elements/ClientSlider";
@@ -10,7 +11,50 @@ import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
+  },
+  rootgrid: {
+  },
+  title: {
+    fontSize: '3rem',
+    color: '#002060',
+    fontFamily: 'Nunito',
+  },
+  colorText: {
+    textAlign: 'center',
+    color: '#4472c4',
+  },
+  compGrid: {
+    justifyContent: 'center',
+    padding: "2%"
+  },
+  compGrid2: {
+    marginTop: '5%',
+    verticalAlign: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    padding: "2%",
+  },
+  minititle: {
+    fontSize: '1rem',
+    color: '#002060',
+    fontFamily: 'Nunito',
+  },
+  listtitle: {
+    color: '#4472c4'
+  },
+}));
+
 export default function Services() {
+  const classes = useStyles();
   return (
     <Wrapper id="services">
       {/* <div className="lightBg" style={{ padding: "50px 0" }}>
@@ -19,7 +63,7 @@ export default function Services() {
         </div>
       </div> */}
       <div className="whiteBg" style={{ padding: "60px 0" }}>
-        <div className="container">
+        {/* <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
             <p className="font13">
@@ -54,25 +98,54 @@ export default function Services() {
               <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
-        </div>
+        </div> */}
         <div className="lightBg">
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
                 <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
-                <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                <h1 className={classes.title}>
+                  About <span className={classes.colorText}> US</span>
+                </h1>
+                <p className={classes.minititle}>
+                  BIM Intelligence INC is a group of BIM and CAD experts based in Canada.
+                  We streamline the building design and construction processes to decrease project time and expense while improving project quality.
+                  Our goal is to create a shared virtual BIM model of a project that will allow building designers, contractors, owners, and facilities managers to all have a common understanding of the project.
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                <p className={classes.minititle}>
+                  <br />Before the building phase, clashes between different design disciplines can be discovered and handled in the BIM 3D model.
+                  Cost estimating, 4D modeling, energy analysis, simulations ,facility management, virtual reality, augmented reality, and BMS are all possible uses for the BIM model.
+                  The following services are available from us:
+                </p>
+                <p className={classes.minititle} >
+                  <br />The following services are available from us:</p>
+                <ul className={classes.listtitle}>
+                  <li>Provide 2D design and construction drawings in AutoCAD and PDF</li>
+                  <li> Model the architectural drawings in Autodesk Revit</li>
+                  <li> Model the structural drawings in Autodesk Revit</li>
+                  <li>Model the MEP drawings in Autodesk Revit </li>
+                  <li>Perform clash detection in Navisworks </li>
+                  <li>Create 4D models in Navisworks</li>
+                  <li>Creating As Built Revit Models of existing buildings using LIDAR Technology</li>
+                  <li>Lighting calculation and simulation based on Dialux platform </li>
+                  <li>Energy optimization of Buildings </li>
+                  <li>Computational Fluid Dynamics (CFD) Simulations of Spaces, Ducts and Pipes </li>
+                  <li>Detailed Bill of material of MEP systems </li>
+                  <li>Site visits on case-by-case basis</li>
+                  <li>Large Scale BIM MEP Trainings for Companies</li>
+                  <li>DYNAMO Based Automations for Repetitive tasks and for Extracting Project Data from Revit</li>
+                  <li>Navisworks Based 3D Model Reviews</li>
+                  <li>High-Definition Walkthrough Videos for Presentation and Viewing Purposes</li>
+                  <li>Revit and AutoCAD Automations and Add-ins to Suit Customers’ special Requirements”</li>
+                </ul>
+                {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>
                     <FullButton title="Get Started" action={() => alert("clicked")} />
                   </div>
                   <div style={{ width: "190px", marginLeft: "15px" }}>
                     <FullButton title="Contact Us" action={() => alert("clicked")} border />
                   </div>
-                </ButtonsRow>
+                </ButtonsRow> */}
               </AddLeft>
               <AddRight>
                 <AddRightInner>
