@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { makeStyles } from '@material-ui/core/styles';
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
@@ -12,17 +13,62 @@ import ProjectImg5 from "../../assets/img/projects/5.png";
 import ProjectImg6 from "../../assets/img/projects/6.png";
 import AddImage2 from "../../assets/img/add/add2.png";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
+  },
+  rootgrid: {
+  },
+  title: {
+    fontSize: '3rem',
+    color: '#002060',
+    fontFamily: 'Nunito',
+  },
+  colorText: {
+    textAlign: 'center',
+    color: '#4472c4',
+  },
+  compGrid: {
+    justifyContent: 'center',
+    padding: "2%"
+  },
+  compGrid2: {
+    marginTop: '5%',
+    verticalAlign: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    padding: "2%",
+  },
+  minititle: {
+    fontSize: '1rem',
+    color: '#002060',
+    fontFamily: 'Nunito',
+  },
+  listtitle: {
+    color: '#4472c4'
+  },
+}));
+
 export default function Projects() {
+  const classes = useStyles();
   return (
     <Wrapper id="projects">
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Projects</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            <h1 className={classes.title}>
+              BIM
+              <span className={classes.colorText}> Services</span></h1>
+            <p className={classes.minititle}>
+              Engineers can use CAD technologies to create various elements of an overall design in a precise and detailed manner. BIM Intelligence provides AutoCAD drafting, PDF to AutoCAD conversion, modifying the client's AutoCAD files, bespoke automated AutoCAD tools and exporting Revit projects as AutoCAD files.”
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              {/* labore et dolore magna aliquyam erat, sed diam voluptua. */}
             </p>
           </HeaderInfo>
           <div className="row textCenter">
@@ -51,7 +97,7 @@ export default function Projects() {
               />
             </div>
           </div>
-          <div className="row textCenter">
+          {/* <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg4}
@@ -76,12 +122,12 @@ export default function Projects() {
                 action={() => alert("clicked")}
               />
             </div>
-          </div>
-          <div className="row flexCenter">
+          </div> */}
+          {/* <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
               <FullButton title="Load More" action={() => alert("clicked")} />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="lightBg">
@@ -95,20 +141,21 @@ export default function Projects() {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
-              <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              {/* <h4 className="font15 semiBold">A few words about company</h4> */}
+              <h1 className={classes.title}>
+                CAD <span className={classes.colorText}> Services</span>
+              </h1>
+              <p className={classes.minititle}>
+                Engineers can use CAD technologies to create various elements of an overall design in a precise and detailed manner. BIM Intelligence provides AutoCAD drafting, PDF to AutoCAD conversion, modifying the client's AutoCAD files, bespoke automated AutoCAD tools and exporting Revit projects as AutoCAD files.”
               </p>
-              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
+              {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
                   <FullButton title="Get Started" action={() => alert("clicked")} />
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
                   <FullButton title="Contact Us" action={() => alert("clicked")} border />
                 </div>
-              </ButtonsRow>
+              </ButtonsRow> */}
             </AddRight>
           </Advertising>
         </div>
