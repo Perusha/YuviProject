@@ -8,7 +8,7 @@ import ContactImg3 from "../../assets/img/contact-3.png";
 export default function Contact() {
   return (
     <Wrapper id="contact">
-      <div className="lightBg">
+      <div >
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
@@ -33,7 +33,7 @@ export default function Contact() {
                 <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
               </SumbitWrapper>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
+            {/* <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
               <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
                 <ContactImgBox>
                   <img src={ContactImg1} alt="office" className="radius6" />
@@ -47,7 +47,7 @@ export default function Contact() {
                   <img src={ContactImg3} alt="office" className="radius6" />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

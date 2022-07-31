@@ -20,7 +20,8 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   },
   title: {
     fontSize: '2.5rem',
-    color: '#002060'
+    color: '#002060',
+    fontFamily: 'Nunito'
   },
   colorText: {
     textAlign: 'center',
@@ -30,6 +31,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     fontSize: '1.5rem',
     color: '#002060',
     fontFamily: 'Nunito',
+    
   },
   root: {
     backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/whitebg4.png'})`,
@@ -199,7 +201,7 @@ export function HeaderStage3() {
 const Wrapper = styled.section`
   padding-top: 80px;
   width: 100%;
-  min-height: 840px;
+  min-height: 600px;
   @media (max-width: 960px) {
     flex-direction: column;
   }

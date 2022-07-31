@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
-import LogoImg from "../../assets/svg/Logo";
+//import LogoImg from "../../assets/img/add/";
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-// import logo from '../../Assets/Logo1.png'
+import logo from '../../assets/img/add/Logo.png'
 import {
   makeStyles,
 } from '@material-ui/core/styles';
@@ -98,9 +98,9 @@ export const ArcAppFooterDemo = React.memo(function ArcAppFooter() {
               <Grid item xs={12} md={4} lg={3}>
                 <Box
                   component={'img'}
-                  width={150}
+                  width={200}
                   height={150}
-                 // src={logo}
+                  src={logo}
                   alt=""
                   borderRadius={12}
                 />

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: '3rem',
     color: '#002060',
-    fontFamily: 'Nunito',
+    fontFamily: 'Nunito'
   },
   colorText: {
     textAlign: 'center',
