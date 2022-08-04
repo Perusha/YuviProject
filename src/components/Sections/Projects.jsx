@@ -14,6 +14,13 @@ import ProjectImg6 from "../../assets/img/projects/6.png";
 import AddImage2 from "../../assets/img/add/add2.png";
 import img1 from '../../assets/img/images/bg1.jpg';
 import img2 from '../../assets/img/images/bg2.jpg';
+import img3 from '../../assets/img/images/bim1.jpg';
+import img4 from '../../assets/img/images/MEP-BIM.jpeg';
+import img5 from '../../assets/img/images/project-in-revit-bim.jpg';
+import img6 from '../../assets/img/images/electrical.jpg';
+import img7 from '../../assets/img/images/CAD3.jpg';
+import img8 from '../../assets/img/images/CAD1.jpeg';
+import img9 from '../../assets/img/images/CAD2.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -95,7 +102,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img2}
+                img={img6}
                 title="Electrical"
                 text="Time to choose side!"
                 action={() => alert("clicked")}
@@ -103,7 +110,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img1}
+                img={img4}
                 title="Plumbing"
                 text="What are you waiting?"
                 action={() => alert("clicked")}
@@ -113,7 +120,7 @@ export default function Projects() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img1}
+                img={img3}
                 title="Common"
                 text="What are you waiting?"
                 action={() => alert("clicked")}
@@ -121,7 +128,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img1}
+                img={img5}
                 title="Special"
                 text="What are you waiting?"
                 action={() => alert("clicked")}
@@ -154,7 +161,7 @@ export default function Projects() {
               <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img1}
+                img={img8}
                 title="Design Drawing"
                 text="Design Drawing"
                 action={() => alert("clicked")}
@@ -162,7 +169,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img2}
+                img={img9}
                 title="Shop Drawing"
                 text="Shop Drawing"
                 action={() => alert("clicked")}
@@ -170,7 +177,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={img1}
+                img={img7}
                 title="Others"
                 text="Others"
                 action={() => alert("clicked")}
