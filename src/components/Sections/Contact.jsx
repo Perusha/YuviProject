@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import styled from "styled-components";
 // Assets
 import ContactImg1 from "../../assets/img/contact-1.png";
 import ContactImg2 from "../../assets/img/contact-2.png";
 import ContactImg3 from "../../assets/img/contact-3.png";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    mail: '',
+    subject: ''
+});
+
+  async function emailsubmit(){
+    let modelobj = {
+      from_name:formData.name,
+      message:formData.mail,
+      form_email:formData.subject
+    }
+    emailjs.send('service_8q6bbbn','template_sqzer17',modelobj,"Eb1pY9N3y6kqPDi_S").then(x=>{
+      console.log("sdsds",x);
+    });
+  }
+
+  function handleChange(e) {
+    const target = e.target
+    const value = (target.name === 'isActive' || target.name === 'isErpEnabled') ? target.checked : target.value
+
+    setFormData({
+        ...formData,
+        [e.target.name]: value
+    });
+}
   return (
     <Wrapper id="contact">
       <div >
@@ -22,15 +50,14 @@ export default function Contact() {
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <Form>
                 <label className="font13">First name:</label>
-                <input type="text" id="fname" name="fname" className="font20 extraBold" />
+                <input type="text" id="fname" name="name" value={formData.name}  onChange={(e) => handleChange(e)} className="font20 extraBold" />
                 <label className="font13">Email:</label>
-                <input type="text" id="email" name="email" className="font20 extraBold" />
+                <input type="text" id="email" name="mail" value={formData.mail}  onChange={(e) => handleChange(e)}  className="font20 extraBold" />
                 <label className="font13">Subject:</label>
-                <input type="text" id="subject" name="subject" className="font20 extraBold" />
-                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
+                <textarea rows="4" cols="50" type="text" id="message" name="subject" value={formData.subject}  onChange={(e) => handleChange(e)} className="font20 extraBold" />
               </Form>
               <SumbitWrapper className="flex">
-                <ButtonInput type="submit" value="Send Email" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                <ButtonInput type="button"  onClick={() => emailsubmit()} value="Send Email" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
               </SumbitWrapper>
             </div>
             {/* <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
