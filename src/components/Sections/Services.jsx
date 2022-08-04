@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect}  from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import styled from "styled-components";
 import Lottie from 'react-lottie';
@@ -13,6 +13,8 @@ import AddImage1 from "../../assets/img/add/1.png";
 import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,6 +60,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Services() {
   const classes = useStyles();
+  useEffect(() => {
+    AOS.init({
+      ...AOS,
+      duration:2000
+    });
+    AOS.refresh();
+  }, []);
 
   const defaultOptions = {
     loop: true,
@@ -115,9 +124,9 @@ export default function Services() {
         <div className="lightBg">
           <div className="container">
             <Advertising className="flexSpaceCenter">
-              <AddLeft>
+              <AddLeft data-aos="fade-right">
                 <h4 className="font15 semiBold">A few words about company</h4>
-                <h1 className={classes.title}>
+                <h1   className={classes.title}>
                   About <span className={classes.colorText}> US</span>
                 </h1>
                 <p className={classes.minititle}>
@@ -160,7 +169,7 @@ export default function Services() {
                   </div>
                 </ButtonsRow> */}
               </AddLeft>
-              <AddRight>
+              <AddRight data-aos="fade-left">
                 <AddRightInner>
           <Lottie
             options={defaultOptions}

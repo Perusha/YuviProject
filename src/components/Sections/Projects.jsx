@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect}  from "react";
 import styled from "styled-components";
 import { makeStyles } from '@material-ui/core/styles';
 // Components
@@ -14,6 +14,8 @@ import ProjectImg6 from "../../assets/img/projects/6.png";
 import AddImage2 from "../../assets/img/add/add2.png";
 import img1 from '../../assets/img/images/bg1.jpg';
 import img2 from '../../assets/img/images/bg2.jpg';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,10 +61,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Projects() {
   const classes = useStyles();
+  useEffect(() => {
+    AOS.init({
+      ...AOS,
+      duration:2000
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
-    <Wrapper id="projects">
-      <div className="whiteBg">
+    <Wrapper   id="projects">
+      <div data-aos="fade-left" className="whiteBg">
         <div className="container">
           <HeaderInfo>
             <h1 className={classes.title}>
@@ -135,8 +145,8 @@ export default function Projects() {
       </div>
       
     </Wrapper>
-    <Wrapper id="blog">
-    <div className="lightBg">
+    <Wrapper   id="blog">
+    <div data-aos="fade-left" className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
             <AddLeft>
