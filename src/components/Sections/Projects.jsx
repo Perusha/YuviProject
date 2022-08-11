@@ -96,7 +96,7 @@ export default function Projects() {
               <ProjectBox
                 img={img1}
                 title="Mechanical"
-                text="Be a Legend!"
+               // text="Be a Legend!"
                 action={() => alert("clicked")}
               />
             </div>
@@ -104,7 +104,7 @@ export default function Projects() {
               <ProjectBox
                 img={img6}
                 title="Electrical"
-                text="Time to choose side!"
+                //text="Time to choose side!"
                 action={() => alert("clicked")}
               />
             </div>
@@ -112,7 +112,7 @@ export default function Projects() {
               <ProjectBox
                 img={img4}
                 title="Plumbing"
-                text="What are you waiting?"
+              //  text="What are you waiting?"
                 action={() => alert("clicked")}
               />
             </div>
@@ -122,7 +122,7 @@ export default function Projects() {
               <ProjectBox
                 img={img3}
                 title="Common"
-                text="What are you waiting?"
+              //  text="What are you waiting?"
                 action={() => alert("clicked")}
               />
             </div>
@@ -130,7 +130,7 @@ export default function Projects() {
               <ProjectBox
                 img={img5}
                 title="Special"
-                text="What are you waiting?"
+               // text="What are you waiting?"
                 action={() => alert("clicked")}
               />
             </div>

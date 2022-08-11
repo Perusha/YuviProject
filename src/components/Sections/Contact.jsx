@@ -5,6 +5,8 @@ import ContactImg1 from "../../assets/img/contact-1.png";
 import ContactImg2 from "../../assets/img/contact-2.png";
 import ContactImg3 from "../../assets/img/contact-3.png";
 import emailjs from '@emailjs/browser';
+//import { ToastContainer, toast } from 'react-toastify';
+//import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
 
@@ -22,6 +24,13 @@ export default function Contact() {
     }
     emailjs.send('service_8q6bbbn','template_sqzer17',modelobj,"Eb1pY9N3y6kqPDi_S").then(x=>{
       console.log("sdsds",x);
+      setFormData({
+        ...formData,
+        name: '',
+        mail: '',
+        subject: ''
+    });
+     // toast.success("Success!One of our team member reach you soon");
     });
   }
 
@@ -37,6 +46,10 @@ export default function Contact() {
   return (
     <Wrapper id="contact">
       <div >
+      {/* <ToastContainer 
+      position="bottom-right"
+      pauseOnHover
+      /> */}
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
@@ -57,7 +70,7 @@ export default function Contact() {
                 <textarea rows="4" cols="50" type="text" id="message" name="subject" value={formData.subject}  onChange={(e) => handleChange(e)} className="font20 extraBold" />
               </Form>
               <SumbitWrapper className="flex">
-                <ButtonInput type="button"  onClick={() => emailsubmit()} value="Send Email" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                <ButtonInput type="button"  onClick={() => emailsubmit()} value="Send" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
               </SumbitWrapper>
             </div>
             {/* <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">

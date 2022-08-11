@@ -86,7 +86,7 @@ export function HeaderStage1() {
         <Grid item className={classes.container}>
           <h1 className={classes.title}>
             Welcome to
-            <span className={classes.colorText}> BIM INTELIGENCE INC.</span>
+            <span className={classes.colorText}> BIM INTELLIGENCE INC.</span>
           </h1>
 
         </Grid>
