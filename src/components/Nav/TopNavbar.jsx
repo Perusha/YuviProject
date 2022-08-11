@@ -24,7 +24,7 @@ export default function TopNavbar() {
     <>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
+      <Wrapper className="flexCenter animate whiteBg" style={y > 60 ? { height: "100px" } : { height: "120px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
@@ -105,6 +105,7 @@ const BurderWrapper = styled.button`
 `;
 const UlWrapper = styled.ul`
   display: flex;
+  margin-left: -100px;
   @media (max-width: 760px) {
     display: none;
   }

@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Nunito",
   },
   logo: {
-    maxWidth: 100,
-    maxHeight: 100,
+    maxWidth: 150,
+    maxHeight: 150,
+    display: "absolute"
   }
 }));
 

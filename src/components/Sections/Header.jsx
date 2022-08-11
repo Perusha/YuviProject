@@ -13,7 +13,16 @@ import animationData2 from '../../assets/Lotties/data2.json';
 import animationData3 from '../../assets/Lotties/bim1.json';
 import Grid from '@material-ui/core/Grid';
 import Carousel from 'react-material-ui-carousel';
-
+import {
+  FloatingMenu,
+  MainButton,
+  ChildButton,
+  Directions
+} from 'react-floating-button-menu';
+import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
+import MessageIcon from '@material-ui/icons/Message';
+import MdClose from '@material-ui/icons/Clear';
+import CallIcon from '@material-ui/icons/Call';
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   container: {
     textAlign: 'center',
@@ -142,9 +151,9 @@ export function HeaderStage2() {
 
       <Grid container justify='center' >
         <Grid item >
-          <p className={classes.minititle}>
+          {/* <p className={classes.minititle}>
             beyond information modeling..
-          </p>
+          </p> */}
         </Grid>
       </Grid>
     </div>
@@ -155,6 +164,7 @@ export function HeaderStage2() {
 
 export function HeaderStage3() {
   const classes = useStyles();
+  const [isFloatOpen, setIsFloat] = React.useState(false);
 
   const defaultOptions = {
     loop: true,
@@ -164,7 +174,10 @@ export function HeaderStage3() {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
-
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const [open, setOpen] = React.useState(false);
   return (
     <div>
       <Grid container justify='center' >
@@ -190,18 +203,20 @@ export function HeaderStage3() {
 
       <Grid container justify='center' >
         <Grid item >
-          <p className={classes.minititle}>
+          {/* <p className={classes.minititle}>
             beyond information modeling..
-          </p>
+          </p> */}
         </Grid>
       </Grid>
+    
     </div>
+
   );
 }
 const Wrapper = styled.section`
-  padding-top: 80px;
+  padding-top: 110px;
   width: 100%;
-  min-height: 600px;
+  min-height: 750px;
   @media (max-width: 960px) {
     flex-direction: column;
   }

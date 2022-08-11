@@ -1,4 +1,4 @@
-import React,{useEffect}  from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { makeStyles } from '@material-ui/core/styles';
 // Components
@@ -71,70 +71,70 @@ export default function Projects() {
   useEffect(() => {
     AOS.init({
       ...AOS,
-      duration:2000
+      duration: 2000
     });
     AOS.refresh();
   }, []);
 
   return (
     <>
-    <Wrapper   id="projects">
-      <div data-aos="fade-left" className="whiteBg">
-        <div className="container">
-          <HeaderInfo>
-            <h1 className={classes.title}>
-              BIM
-              <span className={classes.colorText}> Services</span></h1>
-            <p className={classes.minititle}>
-              Engineers can use CAD technologies to create various elements of an overall design in a precise and detailed manner. BIM Intelligence provides AutoCAD drafting, PDF to AutoCAD conversion, modifying the client's AutoCAD files, bespoke automated AutoCAD tools and exporting Revit projects as AutoCAD files.”
-              <br />
-              {/* labore et dolore magna aliquyam erat, sed diam voluptua. */}
-            </p>
-          </HeaderInfo>
-          <div className="row textCenter">
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <ProjectBox
-                img={img1}
-                title="Mechanical"
-               // text="Be a Legend!"
-                action={() => alert("clicked")}
-              />
+      <Wrapper id="projects">
+        <div data-aos="fade-left" className="whiteBg">
+          <div className="container">
+            <HeaderInfo>
+              <h1 className={classes.title}>
+                BIM
+                <span className={classes.colorText}> Services</span></h1>
+              <p className={classes.minititle}>
+              BIM Intelligence INC provides building information modeling (BIM) services to the architecture, engineering, construction, and facility management (AEC-FM) industries. The BIM model can be utilized for purposes like visualization, collision detection, energy analysis, FEA simulations, cost estimating, and 3D Rendering Services.”
+                <br />
+                {/* labore et dolore magna aliquyam erat, sed diam voluptua. */}
+              </p>
+            </HeaderInfo>
+            <div className="row textCenter">
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img1}
+                  title="Mechanical"
+                  //text="Be a Legend!"
+                  action={() => alert("clicked")}
+                />
+              </div>
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img6}
+                  title="Electrical"
+                  //text="Time to choose side!"
+                  action={() => alert("clicked")}
+                />
+              </div>
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img4}
+                  title="Plumbing"
+                 // text="What are you waiting?"
+                  action={() => alert("clicked")}
+                />
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <ProjectBox
-                img={img6}
-                title="Electrical"
-                //text="Time to choose side!"
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <ProjectBox
-                img={img4}
-                title="Plumbing"
-              //  text="What are you waiting?"
-                action={() => alert("clicked")}
-              />
-            </div>
-          </div>
-          <div className="row textCenter">
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <ProjectBox
-                img={img3}
-                title="Common"
-              //  text="What are you waiting?"
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <ProjectBox
-                img={img5}
-                title="Special"
-               // text="What are you waiting?"
-                action={() => alert("clicked")}
-              />
-            </div>
-            {/* <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            {/* <div className="row textCenter">
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img3}
+                  title="Common"
+                  text="What are you waiting?"
+                  action={() => alert("clicked")}
+                />
+              </div>
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img5}
+                  title="Special"
+                  text="What are you waiting?"
+                  action={() => alert("clicked")}
+                />
+              </div> */}
+              {/* <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg6}
                 title="Awesome Project"
@@ -142,18 +142,21 @@ export default function Projects() {
                 action={() => alert("clicked")}
               />
             </div> */}
-          </div>
-          {/* <div className="row flexCenter">
+            {/* </div> */}
+            {/* <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
               <FullButton title="Load More" action={() => alert("clicked")} />
             </div>
           </div> */}
+          </div>
         </div>
-      </div>
+      </Wrapper>
+
+      <div>
       
-    </Wrapper>
-    <Wrapper   id="blog">
-    <div data-aos="fade-left" className="lightBg">
+      <Wrapper id="blog">
+      <br/><br/><br/><br/>
+        {/* <div data-aos="fade-left" className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
             <AddLeft>
@@ -186,15 +189,15 @@ export default function Projects() {
           </div>
               </AddLeftInner>
             </AddLeft>
-            <AddRight>
-              {/* <h4 className="font15 semiBold">A few words about company</h4> */}
-              <h1 className={classes.title}>
+            <AddRight> */}
+        {/* <h4 className="font15 semiBold">A few words about company</h4> */}
+        {/* <h1 className={classes.title}>
                 CAD <span className={classes.colorText}> Services</span>
               </h1>
               <p className={classes.minititle}>
                 Engineers can use CAD technologies to create various elements of an overall design in a precise and detailed manner. BIM Intelligence provides AutoCAD drafting, PDF to AutoCAD conversion, modifying the client's AutoCAD files, bespoke automated AutoCAD tools and exporting Revit projects as AutoCAD files.”
-              </p>
-              {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
+              </p> */}
+        {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
                   <FullButton title="Get Started" action={() => alert("clicked")} />
                 </div>
@@ -202,13 +205,53 @@ export default function Projects() {
                   <FullButton title="Contact Us" action={() => alert("clicked")} border />
                 </div>
               </ButtonsRow> */}
-            </AddRight>
+        {/* </AddRight>
           </Advertising>
         </div>
+      </div> */}
+        <div data-aos="fade-right" className="whiteBg">
+          <div className="container">
+            <HeaderInfo>
+              <h1 className={classes.title}>
+                CAD
+                <span className={classes.colorText}> Services</span></h1>
+              <p className={classes.minititle}>
+                Engineers can use CAD technologies to create various elements of an overall design in a precise and detailed manner. BIM Intelligence provides AutoCAD drafting, PDF to AutoCAD conversion, modifying the client's AutoCAD files, bespoke automated AutoCAD tools and exporting Revit projects as AutoCAD files.”
+                <br />
+              </p>
+            </HeaderInfo>
+            <div className="row textCenter">
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img8}
+                  title="Design Drawing"
+                 // text="Shop Drawing"
+                  action={() => alert("clicked")}
+                />
+              </div>
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img9}
+                  title="Shop Drawing"
+                 // text="Shop Drawing"
+                  action={() => alert("clicked")}
+                />
+              </div>
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={img7}
+                  title="Others"
+                 // text="Others"
+                  action={() => alert("clicked")}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
       </div>
-    </Wrapper>
     </>
-    
+
   );
 }
 

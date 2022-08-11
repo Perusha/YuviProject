@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { makeStyles } from '@material-ui/core/styles';
+
 
 export default function ProjectBox({ img, title, text, action}) {
+
   return (
     <Wrapper>
-      <ImgBtn className="aniamte pointer" onClick={action ? () => action() : null}>
-        <img className="radius8" src={img} alt="project"></img>
+      <ImgBtn className="aniamte pointer"style={{maxHeight:200,maxWidth:200}} onClick={action ? () => action() : null}>
+        <img className="radius8"   src={img} alt="project"></img>
       </ImgBtn>
       <h3 className="font20 extraBold">{title}</h3>
       <p className="font13">{text}</p>
@@ -18,7 +21,7 @@ const Wrapper = styled.div`
   margin-top: 30px;
   img {
     width: 100%;
-    height: auto;
+    height: 150px;
     margin: 20px 0;
   }
   h3 {

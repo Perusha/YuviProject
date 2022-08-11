@@ -127,16 +127,13 @@ export const ArcAppFooterDemo = React.memo(function ArcAppFooter() {
                         <Font>CAD Services</Font>
                       </CategoryTitle>
                       <CategoryItem>
-                        <Font index={1}>Snowflake Free</Font>
+                        <Font index={1}>Design Drawing</Font>
                       </CategoryItem>
                       <CategoryItem>
-                        <Font index={1}>Coloristic</Font>
+                        <Font index={1}>Shop Drawing</Font>
                       </CategoryItem>
                       <CategoryItem>
-                        <Font index={1}>Summer free</Font>
-                      </CategoryItem>
-                      <CategoryItem>
-                        <Font index={1}>Lucky store</Font>
+                        <Font index={1}>Others</Font>
                       </CategoryItem>
                     </CategoryProvider>
                   </Grid>
@@ -154,9 +151,6 @@ export const ArcAppFooterDemo = React.memo(function ArcAppFooter() {
                       <CategoryItem>
                         <Font index={1}>Plumbing</Font>
                       </CategoryItem>
-                      <CategoryItem>
-                        <Font index={1}>Common Services</Font>
-                      </CategoryItem>
                     </CategoryProvider>
                   </Grid>
                   <Grid item xs={6} sm={4}>
@@ -165,13 +159,7 @@ export const ArcAppFooterDemo = React.memo(function ArcAppFooter() {
                         <Font>About</Font>
                       </CategoryTitle>
                       <CategoryItem>
-                        <Font index={1}>Design Drawings</Font>
-                      </CategoryItem>
-                      <CategoryItem>
-                        <Font index={1}>Shop Drawings</Font>
-                      </CategoryItem>
-                      <CategoryItem>
-                        <Font index={1}>Others</Font>
+                        <Font index={1}>About Us</Font>
                       </CategoryItem>
                     </CategoryProvider>
                   </Grid>
