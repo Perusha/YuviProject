@@ -78,13 +78,14 @@ export default function Services() {
   };
 
   return (
-    <Wrapper id="services">
-      {/* <div className="lightBg" style={{ padding: "50px 0" }}>
+    <Wrapper>
+      <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
+        <h1 className="font18 semiBold">Our Projects </h1>
           <ClientSlider />
         </div>
-      </div> */}
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
+      </div>
+      <div className="whiteBg" style={{ padding: "0px 0" }}>
         {/* <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
@@ -121,7 +122,7 @@ export default function Services() {
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div> */}
-        <div className="lightBg">
+        <div id="services" className="lightBg">
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft data-aos="fade-right">
@@ -226,7 +227,7 @@ const HeaderInfo = styled.div`
   }
 `;
 const Advertising = styled.div`
-  margin: 80px 0;
+  margin: 50px 0;
   padding: 100px 0;
   position: relative;
   @media (max-width: 1160px) {
@@ -264,7 +265,7 @@ const AddLeft = styled.div`
 const AddRight = styled.div`
   width: 50%;
   position: absolute;
-  top:300px;
+  top:100px;
   right: 0;
   @media (max-width: 860px) {
     width: 80%;

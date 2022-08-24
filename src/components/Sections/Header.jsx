@@ -214,9 +214,9 @@ export function HeaderStage3() {
   );
 }
 const Wrapper = styled.section`
-  padding-top: 110px;
+  padding-top: 80px;
   width: 100%;
-  min-height: 750px;
+  min-height: 630px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
