@@ -3,9 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import styled from "styled-components";
 import Lottie from 'react-lottie';
 import aboutus from '../../assets/Lotties/aboutus.json';
+import aboutusc from '../../assets/Lotties/about-us.json';
+
 import Grid from '@material-ui/core/Grid';
 // Components
 import ClientSlider from "../Elements/ClientSlider";
+import ClientSlider2 from "../Elements/ClientSlider2";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
@@ -71,7 +74,7 @@ export default function Services() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: aboutus,
+    animationData: aboutusc,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice"
     }
@@ -79,51 +82,26 @@ export default function Services() {
 
   return (
     <Wrapper>
-      <div className="lightBg" style={{ padding: "50px 0" }}>
+      <div className="whiteBg" style={{ padding: "0px 0" }}>
+
+        <div  className="whiteBg">
+          <div className="container">
+            <ClientSlider2 />
+          </div>
+        </div>
+      </div>
+      
+      <div className="lightBg" style={{ padding: "20px 0" }}>
         <div className="container">
         <h1 className="font18 semiBold">Our Projects </h1>
           <ClientSlider />
         </div>
       </div>
+     
       <div className="whiteBg" style={{ padding: "0px 0" }}>
-        {/* <div className="container">
-          <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
-          </HeaderInfo>
-          <ServiceBoxRow className="flex">
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="roller"
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
-            </ServiceBoxWrapper>
-          </ServiceBoxRow>
-        </div> */}
-        <div id="services" className="lightBg">
-          <div className="container">
+      
+        <div  className="lightBg">
+          <div id="about" className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft data-aos="fade-right">
                 <h4 className="font15 semiBold">A few words about company</h4>
@@ -131,14 +109,16 @@ export default function Services() {
                   About <span className={classes.colorText}> US</span>
                 </h1>
                 <p className={classes.minititle}>
-                  BIM Intelligence INC is a group of BIM and CAD experts based in Canada.
-                  We streamline the building design and construction processes to decrease project time and expense while improving project quality.
-                  Our goal is to create a shared virtual BIM model of a project that will allow building designers, contractors, owners, and facilities managers to all have a common understanding of the project.
+                Our team at BIM Intelligence Inc. work towards a common goal of creating the best value to our clients.
+We streamline the building design and construction processes to reduce project time and expenses, while
+improving the project quality. Our aim is to create shared virtual BIM models for all projects, so that
+building designers, contractors, owners, and facility managers and all to have a common understanding
+of their project.
                 </p>
                 <p className={classes.minititle}>
-                  <br />Before the building phase, clashes between different design disciplines can be discovered and handled in the BIM 3D model.
-                  Cost estimating, 4D modeling, energy analysis, simulations ,facility management, virtual reality, augmented reality, and BMS are all possible uses for the BIM model.
-                  The following services are available from us:
+                  <br />Before the building phase, clashes between different design disciplines can be discovered and handled in
+the BIM 3D model. Cost estimating, 4D modeling, energy analysis, simulations, facility management,
+virtual reality, augmented reality, and BMS are all possible uses for the BIM model.
                 </p>
                 <p className={classes.minititle} >
                   <br />The following services are available from us:</p>

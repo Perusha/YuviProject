@@ -11,6 +11,8 @@ import Lottie from 'react-lottie';
 import animationData from '../../assets/Lotties/city.json';
 import animationData2 from '../../assets/Lotties/data2.json';
 import animationData3 from '../../assets/Lotties/bim1.json';
+import cad from '../../assets/Lotties/cad.png';
+import bim from '../../assets/Lotties/bim.png';
 import Grid from '@material-ui/core/Grid';
 import Carousel from 'react-material-ui-carousel';
 import {
@@ -23,6 +25,9 @@ import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 import MessageIcon from '@material-ui/icons/Message';
 import MdClose from '@material-ui/icons/Clear';
 import CallIcon from '@material-ui/icons/Call';
+
+import Container from '@material-ui/core/Container';
+
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   container: {
     textAlign: 'center',
@@ -129,12 +134,16 @@ export function HeaderStage2() {
   return (
     <div>
       <Grid container justify='center' >
-        <Grid item md={6}>
-          <Lottie
-            options={defaultOptions}
-            height='350px'
-            width='500px'
-          />
+        <Grid  item justify='center'>
+          {/* <LogoWrapper >
+            <ImgStyle src={cad}
+              alt="client logo" />
+          </LogoWrapper> */}
+           
+           <img src={cad} height='350px'
+            width='450px'
+              alt="client logo" />
+    
         </Grid>
       </Grid>
       <br />
@@ -181,12 +190,16 @@ export function HeaderStage3() {
   return (
     <div>
       <Grid container justify='center' >
-        <Grid item md={6}>
-          <Lottie
+        <Grid item justify='center'>
+          {/* <Lottie
             options={defaultOptions}
             height='350px'
             width='500px'
-          />
+          /> */}
+            <img src={bim} height='350px'
+            width='450px'
+              alt="client logo" />
+    
         </Grid>
       </Grid>
       <br />
@@ -213,6 +226,22 @@ export function HeaderStage3() {
 
   );
 }
+
+const LogoWrapper = styled.div`
+  width: 280px;
+  height: 250px;
+  cursor: pointer;
+  :focus-visible {
+    outline: none;
+    border: 0px;
+  }
+`;
+
+const ImgStyle = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
 const Wrapper = styled.section`
   padding-top: 80px;
   width: 100%;
@@ -317,5 +346,4 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
 
